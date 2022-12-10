@@ -1,0 +1,26 @@
+<div *ngIf="ss">
+   
+    <div>{{ss.company_name}}</div>
+    <div *ngIf="ss.percentage_average >= 60 && ss.frequency_of_hiring >=65 && ss.no_of_investors >= 7 && ss.clients>=50">
+        Score:8.5
+        Good
+        
+    </div>
+    <div *ngIf="ss.percentage_average >= 40 && ss.frequency_of_hiring >=45 && ss.no_of_investors >= 4 && ss.clients>=30">
+        Score:6
+        Moderate
+    </div>
+    <div *ngIf="ss.percentage_average >= 10 && ss.frequency_of_hiring >=25 && ss.no_of_investors >= 2 && ss.clients>=10">
+        Score:4
+        Moderate
+    </div>
+
+   
+
+    
+    <!-- {{ss.first_name}}
+    {{ss.last_name}}
+    {{ss.gender}}
+    {{ss.username}}
+    {{ss.contact}} -->
+</div>

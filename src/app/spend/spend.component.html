@@ -1,0 +1,144 @@
+<section>
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row align-items-center">
+            <div class="col-xl-12 col-12 mb-4 mb-xl-0">
+              <h3 class="text-muted text-center mb-3">Company Details</h3>
+              <table class="table table-striped bg-light text-center"*ngFor="let spend of spends;">
+                <thead>
+                  <tr class="text-muted" >
+                    <!-- <th>#</th> -->
+                    <th>Company Name</th>
+                    <!-- <th>Percentage Average</th>
+                    <th>Frequency of Hiring</th> -->
+                    <td >{{spend.company_name}}</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>No of Employees</th>
+                    <td>{{spend.no_of_employees}}</td>
+                  </tr>
+                  <tr>
+                    <th>Loan</th>
+                    <td>{{spend.loan}}</td>
+                  </tr>
+                  <tr>
+                    <th>No of Investors</th>
+                    <td>{{spend.no_of_investors}}</td>
+                  </tr>
+                  <tr >
+                    <!-- <th>{{looper+1}}</th> -->
+                    <th>Average Percentage</th>
+                    <td>{{spend.percentage_average}}</td>
+                    
+                    <!-- <td><button  type="button" class="btn btn-info btn-sm">View Details</button></td> -->
+                  </tr>
+                  <tr>
+                    <th>Frequency Of Hiring</th>
+                    <td>{{spend.frequency_of_hiring}}</td>
+                  </tr>
+                  <tr>
+                    <th>Clients</th>
+                    <td>{{spend.clients}}</td>
+                  </tr>
+                  <tr>
+                    <th>Cost</th>
+                    <td>{{spend.cost}}</td>
+                  </tr>
+                  <tr>
+                    <td><button (click)="rating(spend)"  type="button" class="btn btn-info btn-sm">Rating</button></td>
+                    <td><button  (click)="profit(spend)"type="button" class="btn btn-info btn-sm">Profit</button></td>
+                  </tr>
+                  <app-rating *ngIf="selectedSpend"[ss]="selectedSpend"></app-rating>
+                  <app-profit *ngIf="selectedProfit"[sf]="selectedProfit"></app-profit>
+                  <!-- <app-rating *ngIf="selectedSpend" [ss]="selectedSpend"></app-rating> -->
+
+                  <!-- <tr>
+                    <th>2</th>
+                    <td>Ann</td>
+                    <td>$2000</td>
+                    <td>25/05/2018</td>
+                    <td><button type="button" class="btn btn-info btn-sm">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Mark</td>
+                    <td>$2000</td>
+                    <td>25/05/2018</td>
+                    <td><button type="button" class="btn btn-info btn-sm">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Mary</td>
+                    <td>$2000</td>
+                    <td>25/05/2018</td>
+                    <td><button type="button" class="btn btn-info btn-sm">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Bob</td>
+                    <td>$2000</td>
+                    <td>25/05/2018</td>
+                    <td><button type="button" class="btn btn-info btn-sm">Message</button></td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <!-- <app-student-detail *ngIf="selectedStudent" [ss]="selectedStudent"></app-student-detail> -->
+
+              <!-- pagination -->
+              <!-- <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a href="#" class="page-link py-2 px-3">
+                      1
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      2
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      3
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav> -->
+              <!-- end of pagination -->
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of tables -->
+  <!-- ye hai indexing k liyee -->
+  <!-- <div *ngFor="let student of students;let looper=index;">{{looper+1}}</div> -->
+
+  <!--  form group basically object jayega  -->
+  <!-- marks{
+    p:''
+    c:''
+    m:''
+  } -->
+  <!-- form array basically array jayega -->
+  <!-- array:
+    files:[file1,file2,file3]
+
+   -->
+
